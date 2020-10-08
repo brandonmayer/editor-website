@@ -70,6 +70,7 @@ OpenStreetMap::Application.routes.draw do
     get "user/:id" => "api/users#show", :id => /\d+/
     get "user/details" => "api/users#details"
     get "users" => "api/users#index", :as => :api_users
+    post "user/display_name" => "api/users#display_name"
 
     get "user/preferences" => "api/user_preferences#read"
     get "user/preferences/:preference_key" => "api/user_preferences#read_one"
@@ -164,6 +165,7 @@ OpenStreetMap::Application.routes.draw do
   # match "/user/confirm-email" => "users#confirm_email", :via => [:get, :post]
   post "/user/go_public" => "users#go_public"
   get "/user/suspended" => "users#suspended"
+  get "/username" => "users#username"
 
   get "/index.html", :to => redirect(:path => "/")
   get "/create-account.html", :to => redirect(:path => "/user/new")

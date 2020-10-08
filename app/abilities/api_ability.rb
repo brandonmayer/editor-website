@@ -14,7 +14,7 @@ class ApiAbility
     if Settings.status != "database_offline"
       can [:show, :download, :query], Changeset
       can [:index, :create, :comment, :feed, :show, :search], Note
-      can [:index, :show], User
+      can [:index, :show, :display_name], User
       can [:index, :show], Node
       can [:index, :show, :full, :ways_for_node], Way
       can [:index, :show, :full, :relations_for_node, :relations_for_way, :relations_for_relation], Relation

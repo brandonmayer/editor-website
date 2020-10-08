@@ -52,5 +52,19 @@ module Api
       # it's .now so that this doesn't propagate to other pages.
       flash.now[:skip_terms] = true
     end
+
+    ##
+    # Get displayname from email
+    def display_name
+      # logger.info('here')
+      puts 'here'
+      # logger.info('display_name: email:#{params[:email]}')
+    #   user = User.find_by_email(params[:email])
+    #   if user.nil?
+    #     render :json => {}
+    #   else
+    #     render :json => {:display_name => user.display_name}
+    #   end
+    end
   end
 end
